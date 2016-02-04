@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import "reset";
+@import "compass/css3";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+$FONT_FAMILY: "Segoe UI", Arial, Helvetica, sans-serif;
+$MIN_WIDTH: 320px;
+$MAX_WIDTH: 1146px;
+
+$COLOR_GREEN: #43bc4c;
+$COLOR_GRAY_LIGHT: #dbdbdb;
+$COLOR_GRAY_BG: #2b2d2e;
+$COLOR_GRAY_BORDER: #a6a6a6;
+$COLOR_RED: #ed1f24;
+
+.b-page {
+    margin: 0 auto;
+    &__max {
+        max-width: $MAX_WIDTH;
+    }
+    &__content {
+
+    }
+}
+
+.b-header {
+    margin: 0 0 30px 0;
+    &__inner {
+        text-align: center;
+        font: bold 20px/30px "Courier", serif;
+        padding: 80px 0;
+        background: #ecf0f1;
+    }
+}
+
+.b-footer {
+    margin: 30px 0 0 0;
+    &__inner {
+        text-align: center;
+        font: bold 20px/30px "Courier", serif;
+        padding: 30px 0;
+        background: #ecf0f1;
+    }
+}
+
+%clearfix {
+    &:before {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+        height: 0;
+    }
+}
+
+
+/* Common */
+@import "blocks/elements/main";
+@import "blocks/folders/main";
+
+@import "blocks/category-list/main";
+@import "blocks/photos/main";
+@import "blocks/nanoscroll/main";
+
+/*** Media Queries ***/
+/* lg */
+@media (min-width: 1200px) {
+    @import "blocks/elements/lg";
+    @import "blocks/folders/lg";
+
+    @import "blocks/category-list/lg";
+    @import "blocks/photos/lg";
+    @import "blocks/nanoscroll/lg";
+}
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+    @import "blocks/elements/md";
+    @import "blocks/folders/md";
+
+    @import "blocks/category-list/md";
+    @import "blocks/photos/md";
+    @import "blocks/nanoscroll/md";
+}
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+    @import "blocks/elements/sm";
+    @import "blocks/folders/sm";
+
+    @import "blocks/category-list/sm";
+    @import "blocks/photos/sm";
+    @import "blocks/nanoscroll/md";
+}
+/* xs */
+@media (max-width: 767px) {
+    @import "blocks/elements/xs";
+    @import "blocks/folders/xs";
+
+    @import "blocks/category-list/xs";
+    @import "blocks/photos/xs";
+    @import "blocks/nanoscroll/xs";
+}
+/* xxs */
+@media (max-width: 480px) {
+    @import "blocks/elements/xxs";
+    @import "blocks/folders/xxs";
+
+    @import "blocks/category-list/xxs";
+    @import "blocks/photos/xxs";
+    @import "blocks/nanoscroll/xxs";
+}

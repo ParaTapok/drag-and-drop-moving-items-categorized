@@ -1,0 +1,28 @@
+/* ### alert ### */
+.alert {
+    &__text {
+
+    }
+    &-fixed {
+        text-align: center;
+        display: none;
+        position: fixed;
+        width: 50%;
+        left: 30%;
+        bottom: 10%;
+        z-index: 134;
+        @include box-shadow(0 65px 117px rgba(#000, 0.13));
+        @include transition(all .2s ease-in);
+    }
+    &-warning {
+        a {
+            color: #8a6d3b;
+            text-decoration: underline;
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}

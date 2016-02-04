@@ -1,0 +1,32 @@
+.b-folders {
+    &__link {
+
+    }
+    &__form {
+
+    }
+    &__create {
+        span {
+            border-bottom: 1px solid #b8b9b9;
+        }
+    }
+    &__item {
+
+    }
+    /* drop state */
+    &__item--drop {
+        background: #ffffcc;
+        .b-category-list__a {
+            fill: #000 !important;
+            color: #000 !important;
+            &:hover,
+            &:active {
+                fill: #000 !important;
+                color: #000 !important;
+                span {
+                    border-color: #000 !important;
+                }
+            }
+        }
+    }
+}

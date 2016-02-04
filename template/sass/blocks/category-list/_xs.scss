@@ -1,0 +1,47 @@
+.b-category-list {
+	// padding-bottom: 25px;
+	padding-bottom: 40px;
+	&__all {
+		display: block;
+		border: 2px solid $COLOR_GREEN;
+		padding: 9px 55px 8px 13px;
+		position: relative;
+		cursor: pointer;
+		.icon {
+			@include transition(transform .2s ease-in);
+			width: 22px;
+			height: 12px;
+			position: absolute;
+			right: 17px;
+			top: 50%;
+			margin: -6px 0 0 0;
+		}
+		.inlinesvg & .icon {
+			background: transparent;
+		}
+		.inlinesvg & .icon__svg {
+			display: block;
+			width: 22px;
+			height: 12px;
+			fill: $COLOR_GREEN;
+		}
+	}
+	&__open &__all {
+		.icon {
+			@include rotate(-180deg);
+		}
+	}
+	&__ul {
+		@include box-shadow(0 3px 7px rgba(#000, 0.35));
+	}
+	&__item {
+		margin: 0;
+		padding: 8px 15px;
+	}
+	&__sub > &__item {
+		padding: 0;
+	}
+	&__a {
+		display: block;
+	}
+}
